@@ -8,7 +8,7 @@ After download :
 Frontend Server
 Step 1: Path : /vouchagram-master please run command npm install to install all dependendencies
 
-Step 2: Path : /vouchagram-master run command npm start dev on your command prompt
+Step 2: Path : /vouchagram-master run command npm run dev on your command prompt
 After this it will run on http://localhost:8080/
 
 Backend Server
