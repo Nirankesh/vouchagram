@@ -1,0 +1,131 @@
+.desktopNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  text-align: center;
+  position: relative;
+  vertical-align: bottom;
+}
+.desktopNav ul li {
+  display: inline-block;
+  vertical-align: bottom;
+}
+.desktopNav ul li > a {
+  display: block;
+  color: #777777;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1;
+  padding: 10px 8px 10px 9px;
+  font-weight: 600;
+  border-bottom: 2px solid #fff;
+}
+.desktopNav ul li a figure {
+  padding: 0;
+  margin: 0;
+}
+.desktopNav ul li a figure figcaption {
+  padding: 7px 0 0;
+  margin: 0;
+}
+.desktopNav ul li a:hover {
+  color: #011f79;
+  text-decoration: none;
+  border-bottom: 2px solid #ed0707;
+}
+.desktopNav ul .active {
+  color: #011f79;
+  text-decoration: none;
+  border-bottom: 2px solid #ed0707;
+}
+.desktopNav ul li a:hover img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+@media (min-width: 1200px) {
+  .desktopNav ul li > a {
+    padding: 10px 16px 10px 16px;
+  }
+  .otherWebsite li a {
+    padding: 15px;
+  }
+  .define-quantity {
+    width: 80px;
+  }
+  .define-quantity span {
+    width: 25px !important;
+  }
+}
+
+.productPageBoxNew .voucherGread .VoucherBox .desktopNav ul > li:hover > a {
+  color: #011f79;
+  border-bottom: 2px solid #ed0707;
+}
+.desktopNav ul li .dropdown-menu {
+  padding: 0;
+}
+.desktopNav ul li a.dropdown-toggle:before {
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: #fff;
+  bottom: -10px;
+  content: "";
+  position: absolute;
+  display: none;
+}
+.desktopNav ul li.dropdown:hover a[aria-haspopup="true"]:before,
+.desktopNav ul li.dropdown:hover a.dropdown-toggle:before {
+  display: block;
+}
+.desktopNav ul li a.dropdown-toggle:after {
+  display: none;
+}
+.desktopNav ul li.dropdown.spriteMenu {
+  position: initial;
+}
+.desktopNav ul li.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+.desktopNav ul li.dropdown > .dropdown-toggle:active {
+  pointer-events: none;
+}
+.desktopNav ul li.dropdown > .dropdown-menu {
+  min-width: 100%;
+  border-radius: 0;
+  border: 0;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.05);
+  z-index: 2;
+  margin: 0;
+}
+.desktopNav ul li.dropdown > .dropdown-menu a {
+  text-align: left;
+  vertical-align: top;
+  font-size: 12px;
+  border: 0;
+  line-height: 1;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+}
+.desktopNav ul li.dropdown > .dropdown-menu a:hover {
+  box-shadow: none;
+}
+.desktopNav ul li.dropdown.spriteMenu .dropdown-menu {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+}
+.desktopNav ul li.dropdown.spriteMenu .dropdown-menu a {
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.btn-sm.bg-light2 {
+  background-image: linear-gradient(0deg, #f3f3f3, #e3e3e3) !important;
+}
