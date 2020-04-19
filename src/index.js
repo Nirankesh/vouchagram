@@ -46,8 +46,6 @@ app.get(["/*/:param", "*"], (req, res) => {
   });
 });
 
-app.post("/sendmail", (req, response) => {});
-
 app.listen(port, () => {
   console.log(`Running on Port ${port}`);
 });
