@@ -9,7 +9,7 @@ Frontend Server
 Step 1: Path : /vouchagram-master please run command npm install to install all dependendencies
 
 Step 2: Path : /vouchagram-master run command npm run dev on your command prompt
-After this it will run on http://localhost:8080/
+After this it will run on http://localhost:3000/
 
 Backend Server
 Step 1: Path : /vouchagram-master run command json-server --watch db.json --port 8000 on your command prompt.
