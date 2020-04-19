@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import { createContact } from "../actions/createAction";
+import { Helmet } from "react-helmet";
 
 class Contact extends Component {
   constructor(props) {
@@ -27,12 +28,21 @@ class Contact extends Component {
     event.preventDefault();
   }
 
+  head() {
+    return (
+      <Helmet bodyAttributes={{ class: "menuPage" }}>
+        <title>{`Contact`}</title>
+      </Helmet>
+    );
+  }
+
   render() {
     return (
       <section
         className="ftco-section contact-section ftco-no-pb"
         id="contact-section"
       >
+        {this.head()}
         {this.state.redirects ? (
           <Redirect to="/contact-list" />
         ) : (
@@ -178,4 +188,8 @@ const mapStateToProps = (state) => ({
   redirect: state.create.redirect,
 });
 
-export default connect(mapStateToProps, { createContact })(Contact);
+Contact = connect(mapStateToProps, { createContact })(Contact);
+
+export default {
+  component: Contact,
+};

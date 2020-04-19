@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Table } from "react-bootstrap";
 import { connect } from "react-redux";
 import { fetchMenu } from "../actions/menuActions";
-import "../css/menu.css";
+import { Helmet } from "react-helmet";
 
 class MenuList extends Component {
   constructor() {
@@ -17,6 +16,14 @@ class MenuList extends Component {
     this.props.fetchMenu();
   }
 
+  head() {
+    return (
+      <Helmet bodyAttributes={{ class: "menuPage" }}>
+        <title>{`Menu List`}</title>
+      </Helmet>
+    );
+  }
+
   render() {
     return (
       <div
@@ -25,6 +32,7 @@ class MenuList extends Component {
           minHeight: this.state.minHeight,
         }}
       >
+        {this.head()}
         <h1>Menu List</h1>
         {this.props.menu ? (
           <nav>
@@ -74,4 +82,8 @@ const mapStateToProps = (state) => ({
   menu: state.menu.items,
 });
 
-export default connect(mapStateToProps, { fetchMenu })(MenuList);
+MenuList = connect(mapStateToProps, { fetchMenu })(MenuList);
+
+export default {
+  component: MenuList,
+};

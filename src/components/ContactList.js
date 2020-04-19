@@ -3,6 +3,7 @@ import { Redirect } from "react-router-dom";
 import { Table } from "react-bootstrap";
 import { connect } from "react-redux";
 import { fetchContact } from "../actions/listActions";
+import { Helmet } from "react-helmet";
 
 class ContactList extends Component {
   constructor() {
@@ -17,6 +18,14 @@ class ContactList extends Component {
     this.props.fetchContact();
   }
 
+  head() {
+    return (
+      <Helmet bodyAttributes={{ class: "menuPage" }}>
+        <title>{`Contact List`}</title>
+      </Helmet>
+    );
+  }
+
   render() {
     return (
       <div
@@ -25,6 +34,7 @@ class ContactList extends Component {
           minHeight: this.state.minHeight,
         }}
       >
+        {this.head()}
         <h1>Conatcts List</h1>
         {this.props.list ? (
           <Table striped bordered hover>
@@ -61,4 +71,8 @@ const mapStateToProps = (state) => ({
   list: state.list.items,
 });
 
-export default connect(mapStateToProps, { fetchContact })(ContactList);
+ContactList = connect(mapStateToProps, { fetchContact })(ContactList);
+
+export default {
+  component: ContactList,
+};
